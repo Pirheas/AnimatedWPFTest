@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Contextualizer.AddNew_UC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500"  Background="#181818">
+    <Grid>
+        <Label Foreground="White" FontSize="18" FontWeight="Bold">Ajouter un Menu Contextuel à Windows</Label>
+        <Grid Name="FormAdd" Margin="5,40,5,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="230" />
+                <ColumnDefinition Width="45" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Label VerticalContentAlignment="Center" Foreground="White">Type de Menu :</Label>
+            <ComboBox Grid.Column="1" Width="200" Height="24">
+                <ComboBoxItem IsSelected="True">Répertoire</ComboBoxItem> 
+                <ComboBoxItem>Bureau</ComboBoxItem>
+                <!--<ComboBoxItem>Fichier</ComboBoxItem>-->
+            </ComboBox>
+            <Label VerticalContentAlignment="Center" Foreground="White" Grid.Row="1">Chemin de l'application :</Label>
+            <TextBox Name="ExecPathTextBox" Grid.Row="1" Grid.Column="1" Width="200" Height="24"></TextBox>
+            <Button Name="ExecPath" Click="ExecPath_Click_1"  Grid.Row="1" Grid.Column="2" Width="24" Height="24">...</Button>
+            <Label VerticalContentAlignment="Center" Foreground="White" Grid.Row="2">Nom dans le menu :</Label>
+            <TextBox Name="NameAdd" Grid.Row="2" Grid.Column="1" Width="200" Height="24"></TextBox>
+            <Button Name="ValideAdd" Grid.Row="3" Grid.Column="1" Width="100" Height="26" Click="ValideAdd_Click_1">Valider</Button>
+        </Grid>
+    </Grid>
+</UserControl>
